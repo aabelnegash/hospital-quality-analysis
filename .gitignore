@@ -6,7 +6,7 @@ data/output/*.csv
 !data/sample/*.csv
 
 # SQLite database files
-*.database
+*.db
 *.sqlite
 *.sqlite3
 
