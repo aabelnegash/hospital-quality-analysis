@@ -16,7 +16,7 @@ data/output/*.csv
 # Python tools 
 .venv/
 __pycache__/
-.ipynb_checkpoint/
+.ipynb_checkpoints/
 
 # VS Code
 .vscode/
