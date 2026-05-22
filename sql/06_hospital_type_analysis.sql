@@ -17,6 +17,8 @@ SELECT
     rated_hospitals,
     avg_rating,
     emergency_hospitals,
-    missing_ratings    
+    ROUND(100.0 * emergency_hospitals / total_hospitals, 2) AS emergency_service_pct,
+    missing_ratings,
+    ROUND(100.0 * missing_ratings / total_hospitals, 2) AS missing_rating_pct
 FROM hospital_type_summary
 ORDER BY total_hospitals DESC;
