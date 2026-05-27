@@ -23,6 +23,32 @@ The original cleaning pipeline converted placeholder labels such as `"Not Availa
 
 When this cleaned CSV is loaded into SQLite through pandas, those missing values are preserved as SQL `NULL` values. This keeps SQL filtering and aggregation cleaner. For example, missing hospital ratings are queried with `IS NULL`, not by searching for text labels like `"N/A"`.
 
+## SQL analysis progress
+
+The SQL analysis currently includes:
+
+- Database preview and schema checks
+- Data quality checks for key fields
+- Quality domain analysis using national comparison fields
+- State-level hospital summaries and rating rankings
+- Ownership-level hospital summaries and rating rankings
+- Hospital type summaries and rating rankings
+
+Each major analysis level includes two types of outputs:
+
+- **Summary tables** describe the group overall, including total hospitals, rated hospitals, emergency service coverage, missing ratings, and average rating.
+- **Sample-adjusted rating ranking tables** compare average ratings while reducing the influence of groups with very small numbers of rated hospitals.
+
+## Analysis notes
+
+Missing ratings are treated as missing values, not zeroes. Rating averages are calculated only from hospitals with available overall ratings.
+
+Because some states, ownership types, and hospital types have far fewer rated hospitals than others, raw average ratings can be misleading. To address this, I utilized a sample-adjusted rating score across the state, ownership, and hospital type analysis files:
+
+`sample_adjusted_rating_score = avg_rating * rated_hospitals / (rated_hospitals + 20)`
+
+This score is not an official CMS metric. It is used only as an internal ranking aid for this analysis.
+
 ## Project workflow
 
 ```text
