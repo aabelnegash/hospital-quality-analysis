@@ -49,3 +49,74 @@ SELECT
 FROM ownership_summary
 WHERE rated_hospitals > 0
 ORDER BY sample_adjusted_rating_score DESC;
+
+-- Calculate below-national-average quality comparison percentage by ownership type.
+WITH ownership_quality_domains AS (
+    SELECT
+        hospital_ownership,
+        'Mortality' AS quality_domain,
+        mortality_national_comparison AS national_comparison
+    FROM hospitals
+
+    UNION ALL
+
+    SELECT
+        hospital_ownership,
+        'Safety of Care' AS quality_domain,
+        safety_of_care_national_comparison AS national_comparison
+    FROM hospitals
+
+    UNION ALL
+
+    SELECT
+        hospital_ownership,
+        'Readmission' AS quality_domain,
+        readmission_national_comparison AS national_comparison
+    FROM hospitals
+
+    UNION ALL
+
+    SELECT
+        hospital_ownership,
+        'Patient Experience' AS quality_domain,
+        patient_experience_national_comparison AS national_comparison
+    FROM hospitals
+
+    UNION ALL
+
+    SELECT
+        hospital_ownership,
+        'Effectiveness of Care' AS quality_domain,
+        effectiveness_of_care_national_comparison AS national_comparison
+    FROM hospitals
+
+    UNION ALL
+
+    SELECT
+        hospital_ownership,
+        'Timeliness of Care' AS quality_domain,
+        timeliness_of_care_national_comparison AS national_comparison
+    FROM hospitals
+
+    UNION ALL
+
+    SELECT
+        hospital_ownership,
+        'Efficient Use of Medical Imaging' AS quality_domain,
+        efficient_use_of_medical_imaging_national_comparison AS national_comparison
+    FROM hospitals
+)
+SELECT
+    hospital_ownership,
+    COUNT(*) AS total_compared_records,
+    SUM(CASE WHEN national_comparison = 'Below the national average' THEN 1 ELSE 0 END) AS below_average_records,
+    ROUND(
+        100.0 * SUM(CASE WHEN national_comparison = 'Below the national average' THEN 1 ELSE 0 END) / COUNT(*),
+        2
+    ) AS below_average_pct
+FROM ownership_quality_domains
+WHERE hospital_ownership IS NOT NULL
+  AND national_comparison IS NOT NULL
+GROUP BY hospital_ownership
+HAVING COUNT(*) >= 50
+ORDER BY below_average_pct DESC;

@@ -49,3 +49,72 @@ SELECT
 FROM hospital_type_summary
 WHERE rated_hospitals > 0
 ORDER BY sample_adjusted_rating_score DESC;
+
+-- Calculate missing quality comparison percentage by hospital type.
+WITH hospital_type_quality_domains AS (
+    SELECT
+        hospital_type,
+        'Mortality' AS quality_domain,
+        mortality_national_comparison AS national_comparison
+    FROM hospitals
+
+    UNION ALL
+
+    SELECT
+        hospital_type,
+        'Safety of Care' AS quality_domain,
+        safety_of_care_national_comparison AS national_comparison
+    FROM hospitals
+
+    UNION ALL
+
+    SELECT
+        hospital_type,
+        'Readmission' AS quality_domain,
+        readmission_national_comparison AS national_comparison
+    FROM hospitals
+
+    UNION ALL
+
+    SELECT
+        hospital_type,
+        'Patient Experience' AS quality_domain,
+        patient_experience_national_comparison AS national_comparison
+    FROM hospitals
+
+    UNION ALL
+
+    SELECT
+        hospital_type,
+        'Effectiveness of Care' AS quality_domain,
+        effectiveness_of_care_national_comparison AS national_comparison
+    FROM hospitals
+
+    UNION ALL
+
+    SELECT
+        hospital_type,
+        'Timeliness of Care' AS quality_domain,
+        timeliness_of_care_national_comparison AS national_comparison
+    FROM hospitals
+
+    UNION ALL
+
+    SELECT
+        hospital_type,
+        'Efficient Use of Medical Imaging' AS quality_domain,
+        efficient_use_of_medical_imaging_national_comparison AS national_comparison
+    FROM hospitals
+)
+SELECT
+    hospital_type,
+    COUNT(*) AS total_quality_domain_records,
+    SUM(CASE WHEN national_comparison IS NULL THEN 1 ELSE 0 END) AS missing_quality_domain_records,
+    ROUND(
+        100.0 * SUM(CASE WHEN national_comparison IS NULL THEN 1 ELSE 0 END) / COUNT(*),
+        2
+    ) AS missing_quality_domain_pct
+FROM hospital_type_quality_domains
+WHERE hospital_type IS NOT NULL
+GROUP BY hospital_type
+ORDER BY missing_quality_domain_pct DESC;
