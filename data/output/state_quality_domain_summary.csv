@@ -1,0 +1,393 @@
+state,quality_domain,total_quality_domain_records,compared_records,missing_records,missing_pct,below_average_records,below_average_pct
+AK,Effectiveness of Care,22,8,14,63.64,1,12.5
+AK,Efficient Use of Medical Imaging,22,4,18,81.82,0,0.0
+AK,Mortality,22,8,14,63.64,0,0.0
+AK,Patient Experience,22,10,12,54.55,3,30.0
+AK,Readmission,22,11,11,50.0,0,0.0
+AK,Safety of Care,22,7,15,68.18,4,57.14
+AK,Timeliness of Care,22,7,15,68.18,2,28.57
+AL,Effectiveness of Care,90,85,5,5.56,12,14.12
+AL,Efficient Use of Medical Imaging,90,60,30,33.33,17,28.33
+AL,Mortality,90,77,13,14.44,14,18.18
+AL,Patient Experience,90,72,18,20.0,20,27.78
+AL,Readmission,90,80,10,11.11,12,15.0
+AL,Safety of Care,90,50,40,44.44,14,28.0
+AL,Timeliness of Care,90,86,4,4.44,13,15.12
+AR,Effectiveness of Care,75,56,19,25.33,5,8.93
+AR,Efficient Use of Medical Imaging,75,43,32,42.67,12,27.91
+AR,Mortality,75,61,14,18.67,18,29.51
+AR,Patient Experience,75,50,25,33.33,12,24.0
+AR,Readmission,75,66,9,12.0,21,31.82
+AR,Safety of Care,75,32,43,57.33,4,12.5
+AR,Timeliness of Care,75,54,21,28.0,1,1.85
+AS,Effectiveness of Care,1,0,1,100.0,0,
+AS,Efficient Use of Medical Imaging,1,0,1,100.0,0,
+AS,Mortality,1,0,1,100.0,0,
+AS,Patient Experience,1,0,1,100.0,0,
+AS,Readmission,1,0,1,100.0,0,
+AS,Safety of Care,1,0,1,100.0,0,
+AS,Timeliness of Care,1,0,1,100.0,0,
+AZ,Effectiveness of Care,80,58,22,27.5,7,12.07
+AZ,Efficient Use of Medical Imaging,80,42,38,47.5,7,16.67
+AZ,Mortality,80,48,32,40.0,3,6.25
+AZ,Patient Experience,80,63,17,21.25,32,50.79
+AZ,Readmission,80,59,21,26.25,8,13.56
+AZ,Safety of Care,80,49,31,38.75,16,32.65
+AZ,Timeliness of Care,80,55,25,31.25,18,32.73
+CA,Effectiveness of Care,343,290,53,15.45,25,8.62
+CA,Efficient Use of Medical Imaging,343,190,153,44.61,33,17.37
+CA,Mortality,343,255,88,25.66,25,9.8
+CA,Patient Experience,343,295,48,13.99,180,61.02
+CA,Readmission,343,271,72,20.99,68,25.09
+CA,Safety of Care,343,268,75,21.87,53,19.78
+CA,Timeliness of Care,343,251,92,26.82,156,62.15
+CO,Effectiveness of Care,78,52,26,33.33,0,0.0
+CO,Efficient Use of Medical Imaging,78,45,33,42.31,3,6.67
+CO,Mortality,78,46,32,41.03,2,4.35
+CO,Patient Experience,78,54,24,30.77,4,7.41
+CO,Readmission,78,58,20,25.64,1,1.72
+CO,Safety of Care,78,42,36,46.15,12,28.57
+CO,Timeliness of Care,78,51,27,34.62,0,0.0
+CT,Effectiveness of Care,31,28,3,9.68,1,3.57
+CT,Efficient Use of Medical Imaging,31,27,4,12.9,2,7.41
+CT,Mortality,31,28,3,9.68,2,7.14
+CT,Patient Experience,31,27,4,12.9,9,33.33
+CT,Readmission,31,28,3,9.68,10,35.71
+CT,Safety of Care,31,27,4,12.9,15,55.56
+CT,Timeliness of Care,31,27,4,12.9,18,66.67
+DC,Effectiveness of Care,8,7,1,12.5,3,42.86
+DC,Efficient Use of Medical Imaging,8,7,1,12.5,0,0.0
+DC,Mortality,8,7,1,12.5,0,0.0
+DC,Patient Experience,8,7,1,12.5,7,100.0
+DC,Readmission,8,7,1,12.5,6,85.71
+DC,Safety of Care,8,7,1,12.5,6,85.71
+DC,Timeliness of Care,8,7,1,12.5,7,100.0
+DE,Effectiveness of Care,7,6,1,14.29,1,16.67
+DE,Efficient Use of Medical Imaging,7,6,1,14.29,0,0.0
+DE,Mortality,7,6,1,14.29,0,0.0
+DE,Patient Experience,7,6,1,14.29,1,16.67
+DE,Readmission,7,6,1,14.29,2,33.33
+DE,Safety of Care,7,6,1,14.29,1,16.67
+DE,Timeliness of Care,7,6,1,14.29,5,83.33
+FL,Effectiveness of Care,187,168,19,10.16,8,4.76
+FL,Efficient Use of Medical Imaging,187,146,41,21.93,17,11.64
+FL,Mortality,187,173,14,7.49,21,12.14
+FL,Patient Experience,187,169,18,9.63,104,61.54
+FL,Readmission,187,175,12,6.42,91,52.0
+FL,Safety of Care,187,157,30,16.04,34,21.66
+FL,Timeliness of Care,187,167,20,10.7,64,38.32
+GA,Effectiveness of Care,133,112,21,15.79,6,5.36
+GA,Efficient Use of Medical Imaging,133,76,57,42.86,11,14.47
+GA,Mortality,133,101,32,24.06,9,8.91
+GA,Patient Experience,133,95,38,28.57,35,36.84
+GA,Readmission,133,111,22,16.54,23,20.72
+GA,Safety of Care,133,77,56,42.11,25,32.47
+GA,Timeliness of Care,133,116,17,12.78,33,28.45
+GU,Effectiveness of Care,2,1,1,50.0,0,0.0
+GU,Efficient Use of Medical Imaging,2,0,2,100.0,0,
+GU,Mortality,2,1,1,50.0,1,100.0
+GU,Patient Experience,2,0,2,100.0,0,
+GU,Readmission,2,1,1,50.0,0,0.0
+GU,Safety of Care,2,0,2,100.0,0,
+GU,Timeliness of Care,2,0,2,100.0,0,
+HI,Effectiveness of Care,23,13,10,43.48,0,0.0
+HI,Efficient Use of Medical Imaging,23,9,14,60.87,1,11.11
+HI,Mortality,23,12,11,47.83,0,0.0
+HI,Patient Experience,23,13,10,43.48,3,23.08
+HI,Readmission,23,13,10,43.48,0,0.0
+HI,Safety of Care,23,11,12,52.17,1,9.09
+HI,Timeliness of Care,23,13,10,43.48,4,30.77
+IA,Effectiveness of Care,116,66,50,43.1,1,1.52
+IA,Efficient Use of Medical Imaging,116,44,72,62.07,9,20.45
+IA,Mortality,116,77,39,33.62,6,7.79
+IA,Patient Experience,116,59,57,49.14,5,8.47
+IA,Readmission,116,92,24,20.69,4,4.35
+IA,Safety of Care,116,32,84,72.41,6,18.75
+IA,Timeliness of Care,116,66,50,43.1,1,1.52
+ID,Effectiveness of Care,41,18,23,56.1,0,0.0
+ID,Efficient Use of Medical Imaging,41,16,25,60.98,0,0.0
+ID,Mortality,41,18,23,56.1,2,11.11
+ID,Patient Experience,41,25,16,39.02,3,12.0
+ID,Readmission,41,27,14,34.15,0,0.0
+ID,Safety of Care,41,10,31,75.61,1,10.0
+ID,Timeliness of Care,41,15,26,63.41,0,0.0
+IL,Effectiveness of Care,180,145,35,19.44,9,6.21
+IL,Efficient Use of Medical Imaging,180,127,53,29.44,12,9.45
+IL,Mortality,180,166,14,7.78,13,7.83
+IL,Patient Experience,180,145,35,19.44,36,24.83
+IL,Readmission,180,170,10,5.56,48,28.24
+IL,Safety of Care,180,114,66,36.67,35,30.7
+IL,Timeliness of Care,180,149,31,17.22,36,24.16
+IN,Effectiveness of Care,120,105,15,12.5,3,2.86
+IN,Efficient Use of Medical Imaging,120,88,32,26.67,9,10.23
+IN,Mortality,120,103,17,14.17,10,9.71
+IN,Patient Experience,120,108,12,10.0,11,10.19
+IN,Readmission,120,110,10,8.33,12,10.91
+IN,Safety of Care,120,69,51,42.5,8,11.59
+IN,Timeliness of Care,120,104,16,13.33,8,7.69
+KS,Effectiveness of Care,137,58,79,57.66,3,5.17
+KS,Efficient Use of Medical Imaging,137,48,89,64.96,11,22.92
+KS,Mortality,137,66,71,51.82,4,6.06
+KS,Patient Experience,137,60,77,56.2,5,8.33
+KS,Readmission,137,82,55,40.15,6,7.32
+KS,Safety of Care,137,31,106,77.37,7,22.58
+KS,Timeliness of Care,137,63,74,54.01,1,1.59
+KY,Effectiveness of Care,94,73,21,22.34,10,13.7
+KY,Efficient Use of Medical Imaging,94,68,26,27.66,13,19.12
+KY,Mortality,94,85,9,9.57,7,8.24
+KY,Patient Experience,94,75,19,20.21,12,16.0
+KY,Readmission,94,92,2,2.13,30,32.61
+KY,Safety of Care,94,53,41,43.62,10,18.87
+KY,Timeliness of Care,94,78,16,17.02,12,15.38
+LA,Effectiveness of Care,121,81,40,33.06,6,7.41
+LA,Efficient Use of Medical Imaging,121,54,67,55.37,34,62.96
+LA,Mortality,121,80,41,33.88,4,5.0
+LA,Patient Experience,121,79,42,34.71,7,8.86
+LA,Readmission,121,87,34,28.1,15,17.24
+LA,Safety of Care,121,54,67,55.37,17,31.48
+LA,Timeliness of Care,121,79,42,34.71,12,15.19
+MA,Effectiveness of Care,64,58,6,9.38,4,6.9
+MA,Efficient Use of Medical Imaging,64,53,11,17.19,1,1.89
+MA,Mortality,64,57,7,10.94,0,0.0
+MA,Patient Experience,64,57,7,10.94,15,26.32
+MA,Readmission,64,57,7,10.94,30,52.63
+MA,Safety of Care,64,52,12,18.75,14,26.92
+MA,Timeliness of Care,64,57,7,10.94,33,57.89
+MD,Effectiveness of Care,49,0,49,100.0,0,
+MD,Efficient Use of Medical Imaging,49,0,49,100.0,0,
+MD,Mortality,49,0,49,100.0,0,
+MD,Patient Experience,49,0,49,100.0,0,
+MD,Readmission,49,0,49,100.0,0,
+MD,Safety of Care,49,0,49,100.0,0,
+MD,Timeliness of Care,49,0,49,100.0,0,
+ME,Effectiveness of Care,33,26,7,21.21,0,0.0
+ME,Efficient Use of Medical Imaging,33,27,6,18.18,1,3.7
+ME,Mortality,33,32,1,3.03,1,3.13
+ME,Patient Experience,33,31,2,6.06,2,6.45
+ME,Readmission,33,32,1,3.03,2,6.25
+ME,Safety of Care,33,16,17,51.52,2,12.5
+ME,Timeliness of Care,33,27,6,18.18,9,33.33
+MI,Effectiveness of Care,131,117,14,10.69,7,5.98
+MI,Efficient Use of Medical Imaging,131,111,20,15.27,16,14.41
+MI,Mortality,131,109,22,16.79,8,7.34
+MI,Patient Experience,131,107,24,18.32,27,25.23
+MI,Readmission,131,116,15,11.45,37,31.9
+MI,Safety of Care,131,83,48,36.64,29,34.94
+MI,Timeliness of Care,131,122,9,6.87,24,19.67
+MN,Effectiveness of Care,131,103,28,21.37,1,0.97
+MN,Efficient Use of Medical Imaging,131,48,83,63.36,1,2.08
+MN,Mortality,131,57,74,56.49,1,1.75
+MN,Patient Experience,131,81,50,38.17,3,3.7
+MN,Readmission,131,80,51,38.93,4,5.0
+MN,Safety of Care,131,46,85,64.89,7,15.22
+MN,Timeliness of Care,131,114,17,12.98,1,0.88
+MO,Effectiveness of Care,112,78,34,30.36,4,5.13
+MO,Efficient Use of Medical Imaging,112,69,43,38.39,8,11.59
+MO,Mortality,112,87,25,22.32,12,13.79
+MO,Patient Experience,112,80,32,28.57,18,22.5
+MO,Readmission,112,99,13,11.61,25,25.25
+MO,Safety of Care,112,65,47,41.96,11,16.92
+MO,Timeliness of Care,112,80,32,28.57,11,13.75
+MP,Effectiveness of Care,1,0,1,100.0,0,
+MP,Efficient Use of Medical Imaging,1,0,1,100.0,0,
+MP,Mortality,1,1,0,0.0,0,0.0
+MP,Patient Experience,1,0,1,100.0,0,
+MP,Readmission,1,1,0,0.0,1,100.0
+MP,Safety of Care,1,0,1,100.0,0,
+MP,Timeliness of Care,1,0,1,100.0,0,
+MS,Effectiveness of Care,95,60,35,36.84,8,13.33
+MS,Efficient Use of Medical Imaging,95,48,47,49.47,10,20.83
+MS,Mortality,95,69,26,27.37,8,11.59
+MS,Patient Experience,95,52,43,45.26,18,34.62
+MS,Readmission,95,77,18,18.95,24,31.17
+MS,Safety of Care,95,35,60,63.16,7,20.0
+MS,Timeliness of Care,95,61,34,35.79,2,3.28
+MT,Effectiveness of Care,62,21,41,66.13,1,4.76
+MT,Efficient Use of Medical Imaging,62,14,48,77.42,1,7.14
+MT,Mortality,62,21,41,66.13,2,9.52
+MT,Patient Experience,62,23,39,62.9,2,8.7
+MT,Readmission,62,27,35,56.45,0,0.0
+MT,Safety of Care,62,10,52,83.87,3,30.0
+MT,Timeliness of Care,62,20,42,67.74,2,10.0
+NC,Effectiveness of Care,107,90,17,15.89,2,2.22
+NC,Efficient Use of Medical Imaging,107,81,26,24.3,4,4.94
+NC,Mortality,107,95,12,11.21,21,22.11
+NC,Patient Experience,107,93,14,13.08,21,22.58
+NC,Readmission,107,98,9,8.41,19,19.39
+NC,Safety of Care,107,75,32,29.91,16,21.33
+NC,Timeliness of Care,107,93,14,13.08,25,26.88
+ND,Effectiveness of Care,44,21,23,52.27,0,0.0
+ND,Efficient Use of Medical Imaging,44,13,31,70.45,1,7.69
+ND,Mortality,44,15,29,65.91,2,13.33
+ND,Patient Experience,44,10,34,77.27,3,30.0
+ND,Readmission,44,23,21,47.73,0,0.0
+ND,Safety of Care,44,6,38,86.36,2,33.33
+ND,Timeliness of Care,44,16,28,63.64,0,0.0
+NE,Effectiveness of Care,89,55,34,38.2,1,1.82
+NE,Efficient Use of Medical Imaging,89,37,52,58.43,2,5.41
+NE,Mortality,89,37,52,58.43,3,8.11
+NE,Patient Experience,89,36,53,59.55,1,2.78
+NE,Readmission,89,54,35,39.33,2,3.7
+NE,Safety of Care,89,19,70,78.65,7,36.84
+NE,Timeliness of Care,89,49,40,44.94,1,2.04
+NH,Effectiveness of Care,26,19,7,26.92,0,0.0
+NH,Efficient Use of Medical Imaging,26,20,6,23.08,0,0.0
+NH,Mortality,26,26,0,0.0,0,0.0
+NH,Patient Experience,26,21,5,19.23,0,0.0
+NH,Readmission,26,26,0,0.0,3,11.54
+NH,Safety of Care,26,13,13,50.0,3,23.08
+NH,Timeliness of Care,26,19,7,26.92,7,36.84
+NJ,Effectiveness of Care,66,63,3,4.55,12,19.05
+NJ,Efficient Use of Medical Imaging,66,59,7,10.61,4,6.78
+NJ,Mortality,66,63,3,4.55,2,3.17
+NJ,Patient Experience,66,63,3,4.55,41,65.08
+NJ,Readmission,66,63,3,4.55,39,61.9
+NJ,Safety of Care,66,63,3,4.55,27,42.86
+NJ,Timeliness of Care,66,63,3,4.55,51,80.95
+NM,Effectiveness of Care,41,31,10,24.39,0,0.0
+NM,Efficient Use of Medical Imaging,41,20,21,51.22,3,15.0
+NM,Mortality,41,28,13,31.71,1,3.57
+NM,Patient Experience,41,28,13,31.71,16,57.14
+NM,Readmission,41,34,7,17.07,4,11.76
+NM,Safety of Care,41,18,23,56.1,6,33.33
+NM,Timeliness of Care,41,29,12,29.27,11,37.93
+NV,Effectiveness of Care,35,22,13,37.14,3,13.64
+NV,Efficient Use of Medical Imaging,35,21,14,40.0,0,0.0
+NV,Mortality,35,25,10,28.57,6,24.0
+NV,Patient Experience,35,22,13,37.14,18,81.82
+NV,Readmission,35,27,8,22.86,9,33.33
+NV,Safety of Care,35,19,16,45.71,9,47.37
+NV,Timeliness of Care,35,23,12,34.29,13,56.52
+NY,Effectiveness of Care,171,149,22,12.87,21,14.09
+NY,Efficient Use of Medical Imaging,171,117,54,31.58,7,5.98
+NY,Mortality,171,151,20,11.7,14,9.27
+NY,Patient Experience,171,150,21,12.28,100,66.67
+NY,Readmission,171,155,16,9.36,87,56.13
+NY,Safety of Care,171,136,35,20.47,54,39.71
+NY,Timeliness of Care,171,152,19,11.11,106,69.74
+OH,Effectiveness of Care,168,134,34,20.24,5,3.73
+OH,Efficient Use of Medical Imaging,168,124,44,26.19,5,4.03
+OH,Mortality,168,140,28,16.67,5,3.57
+OH,Patient Experience,168,144,24,14.29,33,22.92
+OH,Readmission,168,143,25,14.88,24,16.78
+OH,Safety of Care,168,113,55,32.74,28,24.78
+OH,Timeliness of Care,168,133,35,20.83,17,12.78
+OK,Effectiveness of Care,124,90,34,27.42,9,10.0
+OK,Efficient Use of Medical Imaging,124,57,67,54.03,23,40.35
+OK,Mortality,124,74,50,40.32,8,10.81
+OK,Patient Experience,124,70,54,43.55,17,24.29
+OK,Readmission,124,85,39,31.45,9,10.59
+OK,Safety of Care,124,48,76,61.29,9,18.75
+OK,Timeliness of Care,124,80,44,35.48,3,3.75
+OR,Effectiveness of Care,60,50,10,16.67,5,10.0
+OR,Efficient Use of Medical Imaging,60,33,27,45.0,1,3.03
+OR,Mortality,60,46,14,23.33,8,17.39
+OR,Patient Experience,60,50,10,16.67,5,10.0
+OR,Readmission,60,53,7,11.67,2,3.77
+OR,Safety of Care,60,32,28,46.67,7,21.88
+OR,Timeliness of Care,60,47,13,21.67,4,8.51
+PA,Effectiveness of Care,171,149,22,12.87,6,4.03
+PA,Efficient Use of Medical Imaging,171,123,48,28.07,20,16.26
+PA,Mortality,171,145,26,15.2,11,7.59
+PA,Patient Experience,171,155,16,9.36,55,35.48
+PA,Readmission,171,147,24,14.04,46,31.29
+PA,Safety of Care,171,125,46,26.9,37,29.6
+PA,Timeliness of Care,171,149,22,12.87,45,30.2
+PR,Effectiveness of Care,52,10,42,80.77,8,80.0
+PR,Efficient Use of Medical Imaging,52,0,52,100.0,0,
+PR,Mortality,52,18,34,65.38,1,5.56
+PR,Patient Experience,52,0,52,100.0,0,
+PR,Readmission,52,25,27,51.92,7,28.0
+PR,Safety of Care,52,6,46,88.46,0,0.0
+PR,Timeliness of Care,52,0,52,100.0,0,
+RI,Effectiveness of Care,11,11,0,0.0,0,0.0
+RI,Efficient Use of Medical Imaging,11,9,2,18.18,0,0.0
+RI,Mortality,11,10,1,9.09,0,0.0
+RI,Patient Experience,11,11,0,0.0,5,45.45
+RI,Readmission,11,10,1,9.09,5,50.0
+RI,Safety of Care,11,11,0,0.0,2,18.18
+RI,Timeliness of Care,11,11,0,0.0,6,54.55
+SC,Effectiveness of Care,60,52,8,13.33,3,5.77
+SC,Efficient Use of Medical Imaging,60,47,13,21.67,3,6.38
+SC,Mortality,60,51,9,15.0,8,15.69
+SC,Patient Experience,60,51,9,15.0,11,21.57
+SC,Readmission,60,52,8,13.33,12,23.08
+SC,Safety of Care,60,44,16,26.67,10,22.73
+SC,Timeliness of Care,60,51,9,15.0,15,29.41
+SD,Effectiveness of Care,60,19,41,68.33,1,5.26
+SD,Efficient Use of Medical Imaging,60,12,48,80.0,0,0.0
+SD,Mortality,60,16,44,73.33,0,0.0
+SD,Patient Experience,60,17,43,71.67,1,5.88
+SD,Readmission,60,26,34,56.67,0,0.0
+SD,Safety of Care,60,10,50,83.33,3,30.0
+SD,Timeliness of Care,60,15,45,75.0,0,0.0
+TN,Effectiveness of Care,107,95,12,11.21,3,3.16
+TN,Efficient Use of Medical Imaging,107,71,36,33.64,2,2.82
+TN,Mortality,107,93,14,13.08,18,19.35
+TN,Patient Experience,107,83,24,22.43,29,34.94
+TN,Readmission,107,94,13,12.15,28,29.79
+TN,Safety of Care,107,68,39,36.45,12,17.65
+TN,Timeliness of Care,107,98,9,8.41,15,15.31
+TX,Effectiveness of Care,411,312,99,24.09,23,7.37
+TX,Efficient Use of Medical Imaging,411,193,218,53.04,46,23.83
+TX,Mortality,411,248,163,39.66,22,8.87
+TX,Patient Experience,411,264,147,35.77,76,28.79
+TX,Readmission,411,273,138,33.58,37,13.55
+TX,Safety of Care,411,204,207,50.36,36,17.65
+TX,Timeliness of Care,411,301,110,26.76,62,20.6
+UT,Effectiveness of Care,46,37,9,19.57,2,5.41
+UT,Efficient Use of Medical Imaging,46,24,22,47.83,1,4.17
+UT,Mortality,46,21,25,54.35,2,9.52
+UT,Patient Experience,46,34,12,26.09,7,20.59
+UT,Readmission,46,31,15,32.61,0,0.0
+UT,Safety of Care,46,23,23,50.0,6,26.09
+UT,Timeliness of Care,46,37,9,19.57,1,2.7
+VA,Effectiveness of Care,86,77,9,10.47,1,1.3
+VA,Efficient Use of Medical Imaging,86,74,12,13.95,6,8.11
+VA,Mortality,86,75,11,12.79,9,12.0
+VA,Patient Experience,86,76,10,11.63,22,28.95
+VA,Readmission,86,78,8,9.3,28,35.9
+VA,Safety of Care,86,64,22,25.58,11,17.19
+VA,Timeliness of Care,86,77,9,10.47,21,27.27
+VI,Effectiveness of Care,2,1,1,50.0,0,0.0
+VI,Efficient Use of Medical Imaging,2,1,1,50.0,0,0.0
+VI,Mortality,2,2,0,0.0,0,0.0
+VI,Patient Experience,2,2,0,0.0,2,100.0
+VI,Readmission,2,2,0,0.0,0,0.0
+VI,Safety of Care,2,2,0,0.0,0,0.0
+VI,Timeliness of Care,2,0,2,100.0,0,
+VT,Effectiveness of Care,14,6,8,57.14,0,0.0
+VT,Efficient Use of Medical Imaging,14,6,8,57.14,0,0.0
+VT,Mortality,14,13,1,7.14,1,7.69
+VT,Patient Experience,14,12,2,14.29,2,16.67
+VT,Readmission,14,13,1,7.14,4,30.77
+VT,Safety of Care,14,6,8,57.14,0,0.0
+VT,Timeliness of Care,14,6,8,57.14,3,50.0
+WA,Effectiveness of Care,91,62,29,31.87,4,6.45
+WA,Efficient Use of Medical Imaging,91,55,36,39.56,1,1.82
+WA,Mortality,91,63,28,30.77,14,22.22
+WA,Patient Experience,91,62,29,31.87,20,32.26
+WA,Readmission,91,71,20,21.98,4,5.63
+WA,Safety of Care,91,46,45,49.45,19,41.3
+WA,Timeliness of Care,91,66,25,27.47,17,25.76
+WI,Effectiveness of Care,126,108,18,14.29,1,0.93
+WI,Efficient Use of Medical Imaging,126,71,55,43.65,1,1.41
+WI,Mortality,126,99,27,21.43,8,8.08
+WI,Patient Experience,126,100,26,20.63,3,3.0
+WI,Readmission,126,112,14,11.11,2,1.79
+WI,Safety of Care,126,60,66,52.38,12,20.0
+WI,Timeliness of Care,126,103,23,18.25,0,0.0
+WV,Effectiveness of Care,49,38,11,22.45,5,13.16
+WV,Efficient Use of Medical Imaging,49,32,17,34.69,9,28.13
+WV,Mortality,49,40,9,18.37,3,7.5
+WV,Patient Experience,49,33,16,32.65,14,42.42
+WV,Readmission,49,46,3,6.12,14,30.43
+WV,Safety of Care,49,23,26,53.06,6,26.09
+WV,Timeliness of Care,49,38,11,22.45,7,18.42
+WY,Effectiveness of Care,28,16,12,42.86,1,6.25
+WY,Efficient Use of Medical Imaging,28,9,19,67.86,2,22.22
+WY,Mortality,28,15,13,46.43,1,6.67
+WY,Patient Experience,28,13,15,53.57,5,38.46
+WY,Readmission,28,19,9,32.14,1,5.26
+WY,Safety of Care,28,7,21,75.0,0,0.0
+WY,Timeliness of Care,28,15,13,46.43,1,6.67

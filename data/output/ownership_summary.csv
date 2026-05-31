@@ -1,0 +1,11 @@
+hospital_ownership,total_hospitals,rated_hospitals,emergency_hospitals,emergency_service_pct,missing_ratings,missing_rating_pct,avg_rating
+Government - Federal,45,16,36,80.0,29,64.44,2.94
+Government - Hospital District or Authority,561,337,548,97.68,224,39.93,3.02
+Government - Local,407,243,389,95.58,164,40.29,2.95
+Government - State,65,45,58,89.23,20,30.77,2.6
+Physician,68,20,37,54.41,48,70.59,3.75
+Proprietary,800,617,711,88.88,183,22.88,2.83
+Tribal,9,2,8,88.89,7,77.78,2.5
+Voluntary non-profit - Church,343,309,327,95.34,34,9.91,3.18
+Voluntary non-profit - Other,462,373,437,94.59,89,19.26,3.15
+Voluntary non-profit - Private,2052,1605,1946,94.83,447,21.78,3.13

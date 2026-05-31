@@ -1,0 +1,71 @@
+hospital_ownership,quality_domain,total_quality_domain_records,compared_records,missing_records,missing_pct,below_average_records,below_average_pct
+Government - Federal,Effectiveness of Care,45,26,19,42.22,4,15.38
+Government - Federal,Efficient Use of Medical Imaging,45,9,36,80.0,0,0.0
+Government - Federal,Mortality,45,13,32,71.11,0,0.0
+Government - Federal,Patient Experience,45,16,29,64.44,5,31.25
+Government - Federal,Readmission,45,19,26,57.78,1,5.26
+Government - Federal,Safety of Care,45,10,35,77.78,2,20.0
+Government - Federal,Timeliness of Care,45,14,31,68.89,3,21.43
+Government - Hospital District or Authority,Effectiveness of Care,561,344,217,38.68,37,10.76
+Government - Hospital District or Authority,Efficient Use of Medical Imaging,561,225,336,59.89,51,22.67
+Government - Hospital District or Authority,Mortality,561,330,231,41.18,40,12.12
+Government - Hospital District or Authority,Patient Experience,561,279,282,50.27,82,29.39
+Government - Hospital District or Authority,Readmission,561,398,163,29.06,52,13.07
+Government - Hospital District or Authority,Safety of Care,561,183,378,67.38,48,26.23
+Government - Hospital District or Authority,Timeliness of Care,561,362,199,35.47,62,17.13
+Government - Local,Effectiveness of Care,407,230,177,43.49,28,12.17
+Government - Local,Efficient Use of Medical Imaging,407,175,232,57.0,30,17.14
+Government - Local,Mortality,407,246,161,39.56,21,8.54
+Government - Local,Patient Experience,407,217,190,46.68,60,27.65
+Government - Local,Readmission,407,297,110,27.03,52,17.51
+Government - Local,Safety of Care,407,127,280,68.8,25,19.69
+Government - Local,Timeliness of Care,407,245,162,39.8,37,15.1
+Government - State,Effectiveness of Care,65,44,21,32.31,5,11.36
+Government - State,Efficient Use of Medical Imaging,65,37,28,43.08,7,18.92
+Government - State,Mortality,65,41,24,36.92,4,9.76
+Government - State,Patient Experience,65,44,21,32.31,15,34.09
+Government - State,Readmission,65,45,20,30.77,19,42.22
+Government - State,Safety of Care,65,38,27,41.54,17,44.74
+Government - State,Timeliness of Care,65,43,22,33.85,26,60.47
+Physician,Effectiveness of Care,68,40,28,41.18,1,2.5
+Physician,Efficient Use of Medical Imaging,68,16,52,76.47,8,50.0
+Physician,Mortality,68,14,54,79.41,0,0.0
+Physician,Patient Experience,68,50,18,26.47,5,10.0
+Physician,Readmission,68,14,54,79.41,0,0.0
+Physician,Safety of Care,68,16,52,76.47,2,12.5
+Physician,Timeliness of Care,68,24,44,64.71,5,20.83
+Proprietary,Effectiveness of Care,800,659,141,17.63,37,5.61
+Proprietary,Efficient Use of Medical Imaging,800,451,349,43.63,69,15.3
+Proprietary,Mortality,800,588,212,26.5,65,11.05
+Proprietary,Patient Experience,800,646,154,19.25,324,50.15
+Proprietary,Readmission,800,629,171,21.38,213,33.86
+Proprietary,Safety of Care,800,520,280,35.0,95,18.27
+Proprietary,Timeliness of Care,800,623,177,22.13,135,21.67
+Tribal,Effectiveness of Care,9,3,6,66.67,0,0.0
+Tribal,Efficient Use of Medical Imaging,9,0,9,100.0,0,
+Tribal,Mortality,9,2,7,77.78,0,0.0
+Tribal,Patient Experience,9,4,5,55.56,1,25.0
+Tribal,Readmission,9,3,6,66.67,0,0.0
+Tribal,Safety of Care,9,0,9,100.0,0,
+Tribal,Timeliness of Care,9,1,8,88.89,0,0.0
+Voluntary non-profit - Church,Effectiveness of Care,343,308,35,10.2,19,6.17
+Voluntary non-profit - Church,Efficient Use of Medical Imaging,343,265,78,22.74,27,10.19
+Voluntary non-profit - Church,Mortality,343,304,39,11.37,41,13.49
+Voluntary non-profit - Church,Patient Experience,343,294,49,14.29,79,26.87
+Voluntary non-profit - Church,Readmission,343,320,23,6.71,76,23.75
+Voluntary non-profit - Church,Safety of Care,343,256,87,25.36,79,30.86
+Voluntary non-profit - Church,Timeliness of Care,343,303,40,11.66,84,27.72
+Voluntary non-profit - Other,Effectiveness of Care,462,376,86,18.61,20,5.32
+Voluntary non-profit - Other,Efficient Use of Medical Imaging,462,310,152,32.9,40,12.9
+Voluntary non-profit - Other,Mortality,462,355,107,23.16,31,8.73
+Voluntary non-profit - Other,Patient Experience,462,368,94,20.35,102,27.72
+Voluntary non-profit - Other,Readmission,462,382,80,17.32,69,18.06
+Voluntary non-profit - Other,Safety of Care,462,302,160,34.63,88,29.14
+Voluntary non-profit - Other,Timeliness of Care,462,356,106,22.94,104,29.21
+Voluntary non-profit - Private,Effectiveness of Care,2052,1580,472,23.0,91,5.76
+Voluntary non-profit - Private,Efficient Use of Medical Imaging,2052,1291,761,37.09,138,10.69
+Voluntary non-profit - Private,Mortality,2052,1567,485,23.64,139,8.87
+Voluntary non-profit - Private,Patient Experience,2052,1525,527,25.68,408,26.75
+Voluntary non-profit - Private,Readmission,2052,1688,364,17.74,384,22.75
+Voluntary non-profit - Private,Safety of Care,2052,1192,860,41.91,308,25.84
+Voluntary non-profit - Private,Timeliness of Care,2052,1575,477,23.25,448,28.44

@@ -1,6 +1,5 @@
 # Full local data
 data/input/*.csv
-data/output/*.csv
 
 # Keep tracking sample data
 !data/sample/*.csv

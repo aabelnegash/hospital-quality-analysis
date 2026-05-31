@@ -1,0 +1,29 @@
+quality_domain,national_comparison,hospital_count
+Effectiveness of Care,Above the national average,130
+Effectiveness of Care,Below the national average,242
+Effectiveness of Care,Missing,1202
+Effectiveness of Care,Same as the national average,3238
+Efficient Use of Medical Imaging,Above the national average,358
+Efficient Use of Medical Imaging,Below the national average,370
+Efficient Use of Medical Imaging,Missing,2033
+Efficient Use of Medical Imaging,Same as the national average,2051
+Mortality,Above the national average,400
+Mortality,Below the national average,341
+Mortality,Missing,1352
+Mortality,Same as the national average,2719
+Patient Experience,Above the national average,1214
+Patient Experience,Below the national average,1081
+Patient Experience,Missing,1369
+Patient Experience,Same as the national average,1148
+Readmission,Above the national average,810
+Readmission,Below the national average,866
+Readmission,Missing,1017
+Readmission,Same as the national average,2119
+Safety of Care,Above the national average,786
+Safety of Care,Below the national average,664
+Safety of Care,Missing,2168
+Safety of Care,Same as the national average,1194
+Timeliness of Care,Above the national average,1088
+Timeliness of Care,Below the national average,904
+Timeliness of Care,Missing,1266
+Timeliness of Care,Same as the national average,1554

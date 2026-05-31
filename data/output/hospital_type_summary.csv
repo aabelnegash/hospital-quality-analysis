@@ -1,0 +1,4 @@
+hospital_type,total_hospitals,rated_hospitals,emergency_hospitals,emergency_service_pct,missing_ratings,missing_rating_pct,avg_rating
+Acute Care Hospitals,3369,2971,3131,92.94,398,11.81,3.01
+Childrens,99,0,53,53.54,99,100.0,
+Critical Access Hospitals,1344,596,1313,97.69,748,55.65,3.32

@@ -1,0 +1,22 @@
+hospital_type,quality_domain,total_quality_domain_records,compared_records,missing_records,missing_pct,below_average_records,below_average_pct
+Acute Care Hospitals,Effectiveness of Care,3369,3092,277,8.22,230,7.44
+Acute Care Hospitals,Efficient Use of Medical Imaging,3369,2503,866,25.7,341,13.62
+Acute Care Hospitals,Mortality,3369,2852,517,15.35,341,11.96
+Acute Care Hospitals,Patient Experience,3369,2994,375,11.13,1062,35.47
+Acute Care Hospitals,Readmission,3369,2934,435,12.91,843,28.73
+Acute Care Hospitals,Safety of Care,3369,2642,727,21.58,664,25.13
+Acute Care Hospitals,Timeliness of Care,3369,2959,410,12.17,900,30.42
+Childrens,Effectiveness of Care,99,0,99,100.0,0,
+Childrens,Efficient Use of Medical Imaging,99,0,99,100.0,0,
+Childrens,Mortality,99,0,99,100.0,0,
+Childrens,Patient Experience,99,0,99,100.0,0,
+Childrens,Readmission,99,0,99,100.0,0,
+Childrens,Safety of Care,99,0,99,100.0,0,
+Childrens,Timeliness of Care,99,0,99,100.0,0,
+Critical Access Hospitals,Effectiveness of Care,1344,518,826,61.46,12,2.32
+Critical Access Hospitals,Efficient Use of Medical Imaging,1344,276,1068,79.46,29,10.51
+Critical Access Hospitals,Mortality,1344,608,736,54.76,0,0.0
+Critical Access Hospitals,Patient Experience,1344,449,895,66.59,19,4.23
+Critical Access Hospitals,Readmission,1344,861,483,35.94,23,2.67
+Critical Access Hospitals,Safety of Care,1344,2,1342,99.85,0,0.0
+Critical Access Hospitals,Timeliness of Care,1344,587,757,56.32,4,0.68

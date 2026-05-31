@@ -1,0 +1,11 @@
+hospital_ownership,total_hospitals,rated_hospitals,avg_rating,rating_coverage_pct,sample_weight,sample_adjusted_rating_score
+Government - Federal,45,16,2.94,35.56,0.444,1.31
+Government - Hospital District or Authority,561,337,3.02,60.07,0.944,2.85
+Government - Local,407,243,2.95,59.71,0.924,2.73
+Government - State,65,45,2.6,69.23,0.692,1.8
+Physician,68,20,3.75,29.41,0.5,1.88
+Proprietary,800,617,2.83,77.13,0.969,2.74
+Tribal,9,2,2.5,22.22,0.091,0.23
+Voluntary non-profit - Church,343,309,3.18,90.09,0.939,2.99
+Voluntary non-profit - Other,462,373,3.15,80.74,0.949,2.99
+Voluntary non-profit - Private,2052,1605,3.13,78.22,0.988,3.09
