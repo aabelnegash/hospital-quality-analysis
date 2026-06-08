@@ -126,6 +126,8 @@ The `Pivot Analysis` sheet adds an interactive layer to the workbook. It include
 
 The workbook also includes an ownership-by-quality-domain PivotTable heat map. This shows how below-national-average rates vary across ownership types and CMS quality domains.
 
+![Excel Pivot Analysis sheet](excel/screenshots/pivot_analysis.png)
+
 The Excel workbook acts as a static analyst report and exploratory workbook. 
 
 
@@ -205,4 +207,15 @@ Several helper tables were created in Power BI using DAX to support interactive 
 Basic DAX measures were also used for dashboard metrics such as rating coverage, average raw rating, average adjusted score, and average below-average percentage.
 
 The Power BI dashboard acts as the interactive reporting layer of the project. It builds on the SQL analysis and Excel report by adding slicers, dynamic visuals, gauges, scatter plots, and quality-domain exploration.
+
+### Dashboard screenshots
+
+#### Overview
+![Power BI Overview page](powerbi/screenshots/overview.png)
+
+#### Rating Rankings
+![Power BI Rating Rankings page](powerbi/screenshots/rating_rankings.png)
+
+#### Quality Domain Analysis
+![Power BI Quality Domain Analysis page](powerbi/screenshots/quality_domain_analysis.png)
 ````
