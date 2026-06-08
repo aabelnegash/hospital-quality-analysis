@@ -127,3 +127,82 @@ The `Pivot Analysis` sheet adds an interactive layer to the workbook. It include
 The workbook also includes an ownership-by-quality-domain PivotTable heat map. This shows how below-national-average rates vary across ownership types and CMS quality domains.
 
 The Excel workbook acts as a static analyst report and exploratory workbook. 
+
+
+## Power BI dashboard
+
+The Power BI dashboard is located in:
+
+```text
+powerbi/hospital_quality_dashboard.pbix
+```
+
+The dashboard uses the cleaned SQL/Excel reporting outputs to create an interactive Power BI report. The goal of the dashboard is to summarize hospital distribution, rating coverage, adjusted rating rankings, and CMS quality-domain patterns in a more interactive format than the Excel workbook.
+
+The Power BI report includes three pages:
+
+### 1. Overview
+
+The Overview page gives a summary of the hospital dataset.
+
+It includes:
+
+- KPI cards for total hospitals, rated hospitals, and missing ratings
+- A slicer-controlled chart that switches between hospital counts by state, ownership type, and hospital type
+- A donut chart showing overall rating availability
+- A gauge showing average hospital rating on a 0–5 scale
+
+This page is designed to quickly answer:
+
+> What is in the dataset, and how complete is the overall rating data?
+
+### 2. Rating Rankings
+
+The Rating Rankings page focuses on the sample-adjusted rating score used in the SQL analysis.
+
+It includes:
+
+- A scatter plot comparing raw average rating against sample-adjusted rating score
+- Bubble sizing based on rated hospital count
+- A slicer that switches the analysis level between state, ownership type, and hospital type
+- A card showing rated hospital count for the current selection
+- A gauge showing the average adjusted score for the selected analysis level
+- A chart showing the largest gaps between raw average rating and adjusted score
+- A ranking chart showing top groups by sample-adjusted rating score
+
+This page is designed to show how sample-adjusted scores compare with raw average ratings. It also highlights where raw ratings may be less stable because the adjustment gap is larger.
+
+The scatter plot is the main comparison visual. Groups farther right have higher raw average ratings. Groups higher on the chart have higher sample-adjusted scores. Larger bubbles represent more rated hospitals.
+
+The adjustment gap chart helps identify groups where the raw average rating and adjusted score differ the most.
+
+### 3. Quality Domain Analysis
+
+The Quality Domain Analysis page focuses on CMS national comparison fields.
+
+It includes:
+
+- A slicer for analysis level: state, ownership type, or hospital type
+- A slicer for quality domain
+- A chart showing below-national-average percentage by selected group
+- A matrix showing below-average rates by quality domain
+- A matrix showing missing comparison percentages by quality domain
+- A gauge summarizing the average below-average percentage for the selected filters
+
+This page is designed to answer:
+
+> Which quality domains show weaker performance, and where is comparison data missing?
+
+## Power BI modeling notes
+
+Several helper tables were created in Power BI using DAX to support interactive visuals:
+
+- `Overview_Group_Counts` combines hospital counts by state, ownership type, and hospital type for the slicer-controlled overview chart.
+- `Combined_Rating_Rankings` combines state, ownership, and hospital type rating rankings for the rating comparison visuals.
+- `Combined_Quality_Domains` combines quality-domain outputs across state, ownership, and hospital type analysis levels.
+- `Rating_Availability` supports the donut chart showing rated versus missing hospital ratings.
+
+Basic DAX measures were also used for dashboard metrics such as rating coverage, average raw rating, average adjusted score, and average below-average percentage.
+
+The Power BI dashboard acts as the interactive reporting layer of the project. It builds on the SQL analysis and Excel report by adding slicers, dynamic visuals, gauges, scatter plots, and quality-domain exploration.
+````
