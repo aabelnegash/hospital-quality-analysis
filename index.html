@@ -1,0 +1,177 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="description" content="This project analyzes cleaned CMS hospital data using SQL, Excel, and Power BI."><meta name="theme-color" content="#12685e"><title>Hospital Quality Analysis · aabelnegash</title><link rel="icon" href="data:,"><link rel="stylesheet" href="portfolio.css"><script src="portfolio.js" defer></script></head>
+<body><a class="skip-link" href="#main">Skip to content</a>
+<header class="site-header"><a class="brand" href="https://github.com/aabelnegash"><span class="brand-mark" aria-hidden="true">a</span>aabelnegash</a><nav aria-label="Primary"><a href="#power-bi-dashboard">Power BI dashboard</a><a href="#sql-analysis">SQL Analysis</a><a href="#excel-reporting">Excel reporting</a><a class="source-link" href="https://github.com/aabelnegash/hospital-quality-analysis" target="_blank" rel="noopener">GitHub <span aria-hidden="true">↗</span></a></nav></header>
+<main id="main"><section class="hero" aria-labelledby="project-title"><div class="hero-top"><a class="repo-label" href="https://github.com/aabelnegash/hospital-quality-analysis">hospital-quality-analysis</a><span class="tool-label">Python / SQLite / SQL / Excel / Power BI</span></div><h1 id="project-title">Hospital Quality<br>Analysis<span class="title-period" aria-hidden="true">.</span></h1><div class="hero-overview" id="project-overview"><h2>Project overview</h2>
+<p>This project analyzes cleaned CMS hospital data using SQL, Excel, and Power BI.</p>
+<p>The cleaned dataset comes from a separate Python/pandas cleaning project. This project starts with the cleaned CSV, loads it into SQLite, runs SQL analysis, and will later use the SQL results for reporting and dashboarding.</p>
+</div><div class="hero-actions"><a class="button primary" href="#power-bi-dashboard">Power BI dashboard <span aria-hidden="true">↓</span></a><a class="button" href="powerbi/hospital_quality_dashboard.pbix" download>hospital_quality_dashboard.pbix <span aria-hidden="true">↓</span></a></div><figure class="hero-image"><a href="powerbi/screenshots/overview.png" target="_blank" rel="noopener" aria-label="Open Power BI Overview page screenshot"><img src="powerbi/screenshots/overview.png" alt="Power BI Overview page" width="1952" height="1098" fetchpriority="high"></a><figcaption><span>Power BI Overview page</span><a href="powerbi/screenshots/overview.png" target="_blank" rel="noopener">Open image <span aria-hidden="true">↗</span></a></figcaption></figure></section>
+<div class="reading-layout"><aside class="contents"><nav aria-label="On this page"><a href="#project-overview">Project overview</a><a href="#data-source">Data source</a><a href="#project-workflow">Project workflow</a><a href="#sql-analysis">SQL Analysis</a><a href="#sql-analysis-methodology">SQL analysis methodology</a><a href="#sample-adjusted-rating-score">Sample-adjusted rating score</a><a href="#important-analysis-notes">Important analysis notes</a><a href="#excel-reporting">Excel reporting</a><a href="#power-bi-dashboard">Power BI dashboard</a><a href="#power-bi-modeling-notes">Power BI modeling notes</a><a href="#repository-files">Repository files</a></nav><a class="readme-link" href="https://github.com/aabelnegash/hospital-quality-analysis/blob/main/README.md" target="_blank" rel="noopener">README.md <span aria-hidden="true">↗</span></a></aside><article class="documentation" aria-label="Project documentation"><section class="doc-section " aria-labelledby="data-source"><div class="section-number" aria-hidden="true">01</div><div class="section-body"><h2 id="data-source">Data source</h2>
+<p>The dataset used in this project is the cleaned version of the CMS Hospital General Information dataset.</p>
+<p>The cleaning step was completed in a separate project:</p>
+<ul>
+<li>Standardized column names</li>
+<li>Cleaned key fields such as state, ZIP code, phone number, and provider ID</li>
+<li>Removed unnecessary footnote columns</li>
+<li>Validated the cleaned output</li>
+</ul>
+<h3 id="missing-values">Missing values</h3>
+<p>The original cleaning pipeline converted placeholder labels such as <code>&quot;Not Available&quot;</code>, <code>&quot;Not Applicable&quot;</code>, <code>&quot;N/A&quot;</code>, <code>&quot;NA&quot;</code>, and blank cells into true missing values.</p>
+<p>When this cleaned CSV is loaded into SQLite through pandas, those missing values are preserved as SQL <code>NULL</code> values. This keeps SQL filtering and aggregation cleaner. For example, missing hospital ratings are queried with <code>IS NULL</code>, not by searching for text labels like <code>&quot;N/A&quot;</code>.</p>
+</div></section>
+<section class="doc-section " aria-labelledby="project-workflow"><div class="section-number" aria-hidden="true">02</div><div class="section-body"><h2 id="project-workflow">Project workflow</h2>
+<pre><code class="language-text">Cleaned hospital CSV
+→ SQLite database
+→ SQL analysis
+→ SQL summary views
+→ Python export script
+→ Excel report workbook
+→ Power BI dashboard
+</code></pre>
+</div></section>
+<section class="doc-section " aria-labelledby="sql-analysis"><div class="section-number" aria-hidden="true">03</div><div class="section-body"><h2 id="sql-analysis">SQL Analysis</h2>
+<p>The SQL analysis currently includes:</p>
+<ul>
+<li>Database preview and schema checks</li>
+<li>Data quality checks for key fields</li>
+<li>Quality domain analysis using national comparison fields</li>
+<li>State-level hospital summaries and rating rankings</li>
+<li>Ownership-level hospital summaries and rating rankings</li>
+<li>Hospital type summaries and rating rankings</li>
+</ul>
+<p>Each major analysis level includes three types of outputs:</p>
+<ul>
+<li><strong>Summary tables</strong> describe each group overall, including total hospitals, rated hospitals, emergency service coverage, missing ratings, and average rating.</li>
+<li><strong>Sample-adjusted rating ranking tables</strong> compare average ratings while reducing the influence of groups with very small numbers of rated hospitals.</li>
+<li><strong>Quality domain comparison tables</strong> connect national comparison fields back to each analysis level, showing how below-average or missing quality-domain results vary by state, ownership type, and hospital type.</li>
+</ul>
+</div></section>
+<section class="doc-section " aria-labelledby="sql-analysis-methodology"><div class="section-number" aria-hidden="true">04</div><div class="section-body"><h2 id="sql-analysis-methodology">SQL analysis methodology</h2>
+<p>The SQL workflow starts by confirming that the cleaned CSV loaded correctly into SQLite. After that, quality checks are used to validate important fields such as provider IDs, ZIP codes, phone numbers, state codes, and hospital ratings.</p>
+<p>The main analysis is grouped across three levels:</p>
+<ul>
+<li>State</li>
+<li>Hospital ownership type</li>
+<li>Hospital type</li>
+</ul>
+<p>The project also analyzes CMS national comparison fields across quality domains. These include mortality, safety of care, readmission, patient experience, effectiveness of care, timeliness of care, and efficient use of medical imaging.</p>
+<p>These quality domain fields are categorical, not numeric. Instead of averaging them, the SQL analysis counts how many hospitals are above, same as, below, or missing compared to the national average.</p>
+<p>The quality domain analysis reshapes these columns from wide format into long format using <code>UNION ALL</code>. This makes it easier to compare national comparison results across domains and connect those results back to state, ownership, and hospital type analysis.</p>
+</div></section>
+<section class="doc-section " aria-labelledby="sample-adjusted-rating-score"><div class="section-number" aria-hidden="true">05</div><div class="section-body"><h2 id="sample-adjusted-rating-score">Sample-adjusted rating score</h2>
+<p>Raw average ratings can be misleading when a group has very few rated hospitals. For example, a state, ownership type, or hospital type with only a small number of rated hospitals can appear near the top of a ranking even though the sample size is weak.</p>
+<p>To reduce that issue, I utilized a sample-adjusted rating score across the state, ownership, and hospital type analysis files:</p>
+<p><code>sample_adjusted_rating_score = avg_rating * rated_hospitals / (rated_hospitals + 20)</code></p>
+<p>This score is not an official CMS metric. It is used only as an internal ranking aid for this analysis.</p>
+<p>The main summary tables still include the raw average rating, but rating ranking tables use the sample-adjusted score to provide better context.</p>
+</div></section>
+<section class="doc-section " aria-labelledby="important-analysis-notes"><div class="section-number" aria-hidden="true">06</div><div class="section-body"><h2 id="important-analysis-notes">Important analysis notes</h2>
+<p>Missing ratings are treated as missing values, not zeroes. Rating averages are calculated only from hospitals with available overall ratings.</p>
+<p>Some hospital groups have limited rating coverage. For example, Children’s hospitals have no overall ratings in this dataset, so they are included in hospital count, emergency service, and missingness analysis, but excluded from rating ranking comparisons.</p>
+<p>National comparison fields also contain missing values. Missingness is analyzed directly so quality domain comparisons are not interpreted without context.</p>
+</div></section>
+<section class="doc-section visual-section" aria-labelledby="excel-reporting"><div class="section-number" aria-hidden="true">07</div><div class="section-body"><h2 id="excel-reporting">Excel reporting</h2>
+<p>The Excel workbook is located in:</p>
+<pre><code class="language-text">excel/hospital_quality_report.xlsx
+</code></pre>
+<p>The workbook uses the exported SQL output CSV files from <code>data/output/</code> and organizes them into a static report and pivot-based analysis workbook.</p>
+<p>The Excel workbook includes:</p>
+<ul>
+<li>Imported SQL output tables from the state, ownership, hospital type, and quality-domain analyses</li>
+<li>A front-page report summarizing dataset overview, rating coverage, adjusted rating rankings, and quality-domain findings</li>
+<li>A <code>Chart Sources</code> sheet with cleaned mini-tables used to build report visuals</li>
+<li>A <code>Pivot Analysis</code> sheet for deeper exploration of state, ownership, and quality-domain patterns</li>
+<li>A slicer-based state quality-domain explorer</li>
+<li>A PivotTable heat map showing below-national-average rates by ownership type and quality domain</li>
+<li>XLOOKUP support to bring sample-adjusted rating scores into the state pivot analysis</li>
+</ul>
+<p>The front-page Excel report is organized into four sections:</p>
+<ol>
+<li><p><strong>Dataset Overview</strong><br>Shows hospital distribution by hospital type, ownership type, and top states by hospital count.</p>
+</li>
+<li><p><strong>Rating Coverage</strong><br>Shows where overall hospital ratings are missing across hospital type, ownership type, and selected states.</p>
+</li>
+<li><p><strong>Rating Rankings</strong><br>Uses a sample-adjusted rating score to compare states, ownership types, and hospital types while reducing the influence of small rated sample sizes.</p>
+</li>
+<li><p><strong>Quality Domain Findings</strong><br>Summarizes below-national-average rates and missing comparison data across CMS quality domains.</p>
+</li>
+</ol>
+<p>The <code>Pivot Analysis</code> sheet adds an interactive layer to the workbook. It includes a state-level quality-domain explorer where the selected quality domain changes the PivotTable and PivotChart. The analysis also includes compared record counts and sample-adjusted rating scores to help interpret whether a state result is based on enough available data.</p>
+<p>The workbook also includes an ownership-by-quality-domain PivotTable heat map. This shows how below-national-average rates vary across ownership types and CMS quality domains.</p>
+<p><a class="image-link" href="excel/screenshots/pivot_analysis.png" target="_blank" rel="noopener"><img src="excel/screenshots/pivot_analysis.png" alt="Excel Pivot Analysis sheet" loading="lazy" width="1952" height="1098"></a></p>
+<p>The Excel workbook acts as a static analyst report and exploratory workbook. </p>
+</div></section>
+<section class="doc-section " aria-labelledby="power-bi-dashboard"><div class="section-number" aria-hidden="true">08</div><div class="section-body"><h2 id="power-bi-dashboard">Power BI dashboard</h2>
+<p>The Power BI dashboard is located in:</p>
+<pre><code class="language-text">powerbi/hospital_quality_dashboard.pbix
+</code></pre>
+<p>The dashboard uses the cleaned SQL/Excel reporting outputs to create an interactive Power BI report. The goal of the dashboard is to summarize hospital distribution, rating coverage, adjusted rating rankings, and CMS quality-domain patterns in a more interactive format than the Excel workbook.</p>
+<p>The Power BI report includes three pages:</p>
+<h3 id="1-overview">1. Overview</h3>
+<p>The Overview page gives a summary of the hospital dataset.</p>
+<p>It includes:</p>
+<ul>
+<li>KPI cards for total hospitals, rated hospitals, and missing ratings</li>
+<li>A slicer-controlled chart that switches between hospital counts by state, ownership type, and hospital type</li>
+<li>A donut chart showing overall rating availability</li>
+<li>A gauge showing average hospital rating on a 0–5 scale</li>
+</ul>
+<p>This page is designed to quickly answer:</p>
+<blockquote>
+<p>What is in the dataset, and how complete is the overall rating data?</p>
+</blockquote>
+<h3 id="2-rating-rankings">2. Rating Rankings</h3>
+<p>The Rating Rankings page focuses on the sample-adjusted rating score used in the SQL analysis.</p>
+<p>It includes:</p>
+<ul>
+<li>A scatter plot comparing raw average rating against sample-adjusted rating score</li>
+<li>Bubble sizing based on rated hospital count</li>
+<li>A slicer that switches the analysis level between state, ownership type, and hospital type</li>
+<li>A card showing rated hospital count for the current selection</li>
+<li>A gauge showing the average adjusted score for the selected analysis level</li>
+<li>A chart showing the largest gaps between raw average rating and adjusted score</li>
+<li>A ranking chart showing top groups by sample-adjusted rating score</li>
+</ul>
+<p>This page is designed to show how sample-adjusted scores compare with raw average ratings. It also highlights where raw ratings may be less stable because the adjustment gap is larger.</p>
+<p>The scatter plot is the main comparison visual. Groups farther right have higher raw average ratings. Groups higher on the chart have higher sample-adjusted scores. Larger bubbles represent more rated hospitals.</p>
+<p>The adjustment gap chart helps identify groups where the raw average rating and adjusted score differ the most.</p>
+<h3 id="3-quality-domain-analysis">3. Quality Domain Analysis</h3>
+<p>The Quality Domain Analysis page focuses on CMS national comparison fields.</p>
+<p>It includes:</p>
+<ul>
+<li>A slicer for analysis level: state, ownership type, or hospital type</li>
+<li>A slicer for quality domain</li>
+<li>A chart showing below-national-average percentage by selected group</li>
+<li>A matrix showing below-average rates by quality domain</li>
+<li>A matrix showing missing comparison percentages by quality domain</li>
+<li>A gauge summarizing the average below-average percentage for the selected filters</li>
+</ul>
+<p>This page is designed to answer:</p>
+<blockquote>
+<p>Which quality domains show weaker performance, and where is comparison data missing?</p>
+</blockquote>
+</div></section>
+<section class="doc-section visual-section" aria-labelledby="power-bi-modeling-notes"><div class="section-number" aria-hidden="true">09</div><div class="section-body"><h2 id="power-bi-modeling-notes">Power BI modeling notes</h2>
+<p>Several helper tables were created in Power BI using DAX to support interactive visuals:</p>
+<ul>
+<li><code>Overview_Group_Counts</code> combines hospital counts by state, ownership type, and hospital type for the slicer-controlled overview chart.</li>
+<li><code>Combined_Rating_Rankings</code> combines state, ownership, and hospital type rating rankings for the rating comparison visuals.</li>
+<li><code>Combined_Quality_Domains</code> combines quality-domain outputs across state, ownership, and hospital type analysis levels.</li>
+<li><code>Rating_Availability</code> supports the donut chart showing rated versus missing hospital ratings.</li>
+</ul>
+<p>Basic DAX measures were also used for dashboard metrics such as rating coverage, average raw rating, average adjusted score, and average below-average percentage.</p>
+<h3 id="rated-hospital-count-correction-october-21-2026">Rated-hospital count correction — October 21, 2026</h3>
+<p>The Rating Rankings count card previously summed overlapping state, ownership, and hospital-type summaries, displaying <strong>10,701</strong> instead of <strong>3,567</strong> rated hospitals when all analysis levels were included. The analysis-level slicer now enforces a single selection, and the card uses the <strong>Selected Rated Hospitals</strong> measure instead of directly summing the column. The corrected count was checked across all three analysis levels with other filters cleared; each shows <strong>3,567</strong>. The saved PBIX includes the correction.</p>
+<p>The Power BI dashboard acts as the interactive reporting layer of the project. It builds on the SQL analysis and Excel report by adding slicers, dynamic visuals, gauges, scatter plots, and quality-domain exploration.</p>
+<h3 id="dashboard-screenshots">Dashboard screenshots</h3>
+<h4 id="overview">Overview</h4>
+<p><a class="image-link" href="powerbi/screenshots/overview.png" target="_blank" rel="noopener"><img src="powerbi/screenshots/overview.png" alt="Power BI Overview page" loading="lazy" width="1952" height="1098"></a></p>
+<h4 id="rating-rankings">Rating Rankings</h4>
+<p><a class="image-link" href="powerbi/screenshots/rating_rankings.png" target="_blank" rel="noopener"><img src="powerbi/screenshots/rating_rankings.png" alt="Power BI Rating Rankings page" loading="lazy" width="1952" height="1098"></a></p>
+<h4 id="quality-domain-analysis">Quality Domain Analysis</h4>
+<p><a class="image-link" href="powerbi/screenshots/quality_domain_analysis.png" target="_blank" rel="noopener"><img src="powerbi/screenshots/quality_domain_analysis.png" alt="Power BI Quality Domain Analysis page" loading="lazy" width="1952" height="1098"></a></p>
+<pre><code>
+</code></pre>
+</div></section></article></div>
+<section class="repository" id="repository-files" aria-labelledby="files-title"><div class="repository-heading"><h2 id="files-title">Repository files</h2><a href="https://github.com/aabelnegash/hospital-quality-analysis" target="_blank" rel="noopener">GitHub <span aria-hidden="true">↗</span></a></div><div class="download-row"><a class="button primary" href="excel/hospital_quality_report.xlsx" download>hospital_quality_report.xlsx <span aria-hidden="true">↓</span></a><a class="button" href="powerbi/hospital_quality_dashboard.pbix" download>hospital_quality_dashboard.pbix <span aria-hidden="true">↓</span></a></div><div class="file-columns"><details class="file-group" open><summary>/<span aria-hidden="true">↗</span></summary><ul><li><a href="https://github.com/aabelnegash/hospital-quality-analysis/blob/main/.gitignore" target="_blank" rel="noopener">.gitignore<span aria-hidden="true">↗</span></a></li><li><a href="https://github.com/aabelnegash/hospital-quality-analysis/blob/main/README.md" target="_blank" rel="noopener">README.md<span aria-hidden="true">↗</span></a></li><li><a href="https://github.com/aabelnegash/hospital-quality-analysis/blob/main/export_sql_outputs.py" target="_blank" rel="noopener">export_sql_outputs.py<span aria-hidden="true">↗</span></a></li><li><a href="https://github.com/aabelnegash/hospital-quality-analysis/blob/main/load_to_sqlite.py" target="_blank" rel="noopener">load_to_sqlite.py<span aria-hidden="true">↗</span></a></li><li><a href="https://github.com/aabelnegash/hospital-quality-analysis/blob/main/make_sample.py" target="_blank" rel="noopener">make_sample.py<span aria-hidden="true">↗</span></a></li></ul></details><details class="file-group" open><summary>data/output/<span aria-hidden="true">↗</span></summary><ul><li><a href="https://github.com/aabelnegash/hospital-quality-analysis/blob/main/data/output/hospital_type_quality_domain_summary.csv" target="_blank" rel="noopener">hospital_type_quality_domain_summary.csv<span aria-hidden="true">↗</span></a></li><li><a href="https://github.com/aabelnegash/hospital-quality-analysis/blob/main/data/output/hospital_type_rating_rankings.csv" target="_blank" rel="noopener">hospital_type_rating_rankings.csv<span aria-hidden="true">↗</span></a></li><li><a href="https://github.com/aabelnegash/hospital-quality-analysis/blob/main/data/output/hospital_type_summary.csv" target="_blank" rel="noopener">hospital_type_summary.csv<span aria-hidden="true">↗</span></a></li><li><a href="https://github.com/aabelnegash/hospital-quality-analysis/blob/main/data/output/ownership_quality_domain_summary.csv" target="_blank" rel="noopener">ownership_quality_domain_summary.csv<span aria-hidden="true">↗</span></a></li><li><a href="https://github.com/aabelnegash/hospital-quality-analysis/blob/main/data/output/ownership_rating_rankings.csv" target="_blank" rel="noopener">ownership_rating_rankings.csv<span aria-hidden="true">↗</span></a></li><li><a href="https://github.com/aabelnegash/hospital-quality-analysis/blob/main/data/output/ownership_summary.csv" target="_blank" rel="noopener">ownership_summary.csv<span aria-hidden="true">↗</span></a></li><li><a href="https://github.com/aabelnegash/hospital-quality-analysis/blob/main/data/output/quality_domain_below_average.csv" target="_blank" rel="noopener">quality_domain_below_average.csv<span aria-hidden="true">↗</span></a></li><li><a href="https://github.com/aabelnegash/hospital-quality-analysis/blob/main/data/output/quality_domain_missingness.csv" target="_blank" rel="noopener">quality_domain_missingness.csv<span aria-hidden="true">↗</span></a></li><li><a href="https://github.com/aabelnegash/hospital-quality-analysis/blob/main/data/output/quality_domain_summary.csv" target="_blank" rel="noopener">quality_domain_summary.csv<span aria-hidden="true">↗</span></a></li><li><a href="https://github.com/aabelnegash/hospital-quality-analysis/blob/main/data/output/state_quality_domain_summary.csv" target="_blank" rel="noopener">state_quality_domain_summary.csv<span aria-hidden="true">↗</span></a></li><li><a href="https://github.com/aabelnegash/hospital-quality-analysis/blob/main/data/output/state_rating_rankings.csv" target="_blank" rel="noopener">state_rating_rankings.csv<span aria-hidden="true">↗</span></a></li><li><a href="https://github.com/aabelnegash/hospital-quality-analysis/blob/main/data/output/state_summary.csv" target="_blank" rel="noopener">state_summary.csv<span aria-hidden="true">↗</span></a></li></ul></details><details class="file-group" open><summary>data/sample/<span aria-hidden="true">↗</span></summary><ul><li><a href="https://github.com/aabelnegash/hospital-quality-analysis/blob/main/data/sample/hospital_clean_sample.csv" target="_blank" rel="noopener">hospital_clean_sample.csv<span aria-hidden="true">↗</span></a></li></ul></details><details class="file-group" open><summary>excel/<span aria-hidden="true">↗</span></summary><ul><li><a href="https://github.com/aabelnegash/hospital-quality-analysis/blob/main/excel/hospital_quality_report.xlsx" target="_blank" rel="noopener">hospital_quality_report.xlsx<span aria-hidden="true">↗</span></a></li></ul></details><details class="file-group" open><summary>excel/screenshots/<span aria-hidden="true">↗</span></summary><ul><li><a href="https://github.com/aabelnegash/hospital-quality-analysis/blob/main/excel/screenshots/pivot_analysis.png" target="_blank" rel="noopener">pivot_analysis.png<span aria-hidden="true">↗</span></a></li></ul></details><details class="file-group" open><summary>powerbi/<span aria-hidden="true">↗</span></summary><ul><li><a href="https://github.com/aabelnegash/hospital-quality-analysis/blob/main/powerbi/hospital_quality_dashboard.pbix" target="_blank" rel="noopener">hospital_quality_dashboard.pbix<span aria-hidden="true">↗</span></a></li></ul></details><details class="file-group" open><summary>powerbi/screenshots/<span aria-hidden="true">↗</span></summary><ul><li><a href="https://github.com/aabelnegash/hospital-quality-analysis/blob/main/powerbi/screenshots/overview.png" target="_blank" rel="noopener">overview.png<span aria-hidden="true">↗</span></a></li><li><a href="https://github.com/aabelnegash/hospital-quality-analysis/blob/main/powerbi/screenshots/quality_domain_analysis.png" target="_blank" rel="noopener">quality_domain_analysis.png<span aria-hidden="true">↗</span></a></li><li><a href="https://github.com/aabelnegash/hospital-quality-analysis/blob/main/powerbi/screenshots/rating_rankings.png" target="_blank" rel="noopener">rating_rankings.png<span aria-hidden="true">↗</span></a></li></ul></details><details class="file-group" open><summary>sql/<span aria-hidden="true">↗</span></summary><ul><li><a href="https://github.com/aabelnegash/hospital-quality-analysis/blob/main/sql/01_preview_data.sql" target="_blank" rel="noopener">01_preview_data.sql<span aria-hidden="true">↗</span></a></li><li><a href="https://github.com/aabelnegash/hospital-quality-analysis/blob/main/sql/02_quality_checks.sql" target="_blank" rel="noopener">02_quality_checks.sql<span aria-hidden="true">↗</span></a></li><li><a href="https://github.com/aabelnegash/hospital-quality-analysis/blob/main/sql/03_quality_domain_analysis.sql" target="_blank" rel="noopener">03_quality_domain_analysis.sql<span aria-hidden="true">↗</span></a></li><li><a href="https://github.com/aabelnegash/hospital-quality-analysis/blob/main/sql/04_state_analysis.sql" target="_blank" rel="noopener">04_state_analysis.sql<span aria-hidden="true">↗</span></a></li><li><a href="https://github.com/aabelnegash/hospital-quality-analysis/blob/main/sql/05_ownership_analysis.sql" target="_blank" rel="noopener">05_ownership_analysis.sql<span aria-hidden="true">↗</span></a></li><li><a href="https://github.com/aabelnegash/hospital-quality-analysis/blob/main/sql/06_hospital_type_analysis.sql" target="_blank" rel="noopener">06_hospital_type_analysis.sql<span aria-hidden="true">↗</span></a></li><li><a href="https://github.com/aabelnegash/hospital-quality-analysis/blob/main/sql/07_summary_views.sql" target="_blank" rel="noopener">07_summary_views.sql<span aria-hidden="true">↗</span></a></li></ul></details></div></section></main>
+<footer><a class="footer-title" href="#project-title">Hospital Quality Analysis</a><a href="https://github.com/aabelnegash/hospital-quality-analysis">aabelnegash / hospital-quality-analysis <span aria-hidden="true">↗</span></a><a href="#project-title">Back to top ↑</a></footer></body></html>
