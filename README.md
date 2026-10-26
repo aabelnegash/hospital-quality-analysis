@@ -214,7 +214,9 @@ The Power BI dashboard acts as the interactive reporting layer of the project. I
 ![Power BI Overview page](powerbi/screenshots/overview.png)
 
 #### Rating Rankings
-View the corrected Rating Rankings page in the [Power BI dashboard (PBIX)](powerbi/hospital_quality_dashboard.pbix).
+![Power BI Rating Rankings page with State selected and 3,567 rated hospitals](powerbi/screenshots/rating_rankings.png)
+
+State analysis selected; 3,567 rated hospitals.
 
 #### Quality Domain Analysis
 ![Power BI Quality Domain Analysis page](powerbi/screenshots/quality_domain_analysis.png)
