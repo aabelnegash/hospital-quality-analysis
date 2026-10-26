@@ -4,7 +4,7 @@
 
 This project analyzes cleaned CMS hospital data using SQL, Excel, and Power BI.
 
-The cleaned dataset comes from a separate Python/pandas cleaning project. This project starts with the cleaned CSV, loads it into SQLite, runs SQL analysis, and will later use the SQL results for reporting and dashboarding.
+The cleaned dataset comes from a separate Python/pandas cleaning project. This project loads the cleaned CSV into SQLite, runs SQL analysis, and uses the SQL results for Excel reporting and Power BI dashboards.
 
 ## Data source
 
