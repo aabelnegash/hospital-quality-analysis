@@ -154,9 +154,7 @@ It includes:
 - A donut chart showing overall rating availability
 - A gauge showing average hospital rating on a 0–5 scale
 
-This page is designed to quickly answer:
-
-> What is in the dataset, and how complete is the overall rating data?
+The Overview page summarizes hospital counts and the completeness of overall rating data.
 
 ### 2. Rating Rankings
 
@@ -191,9 +189,7 @@ It includes:
 - A matrix showing missing comparison percentages by quality domain
 - A gauge summarizing the average below-average percentage for the selected filters
 
-This page is designed to answer:
-
-> Which quality domains show weaker performance, and where is comparison data missing?
+The Quality Domain Analysis page highlights below-national-average results and gaps in comparison data.
 
 ## Power BI modeling notes
 
@@ -218,7 +214,7 @@ The Power BI dashboard acts as the interactive reporting layer of the project. I
 ![Power BI Overview page](powerbi/screenshots/overview.png)
 
 #### Rating Rankings
-![Power BI Rating Rankings page](powerbi/screenshots/rating_rankings.png)
+View the corrected Rating Rankings page in the [Power BI dashboard (PBIX)](powerbi/hospital_quality_dashboard.pbix).
 
 #### Quality Domain Analysis
 ![Power BI Quality Domain Analysis page](powerbi/screenshots/quality_domain_analysis.png)
