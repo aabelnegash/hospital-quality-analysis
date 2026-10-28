@@ -202,10 +202,6 @@ Several helper tables were created in Power BI using DAX to support interactive 
 
 Basic DAX measures were also used for dashboard metrics such as rating coverage, average raw rating, average adjusted score, and average below-average percentage.
 
-### Rated-hospital count correction — October 21, 2026
-
-The Rating Rankings count card previously summed overlapping state, ownership, and hospital-type summaries, displaying **10,701** instead of **3,567** rated hospitals when all analysis levels were included. The analysis-level slicer now enforces a single selection, and the card uses the **Selected Rated Hospitals** measure instead of directly summing the column. The corrected count was checked across all three analysis levels with other filters cleared; each shows **3,567**. The saved PBIX includes the correction.
-
 The Power BI dashboard acts as the interactive reporting layer of the project. It builds on the SQL analysis and Excel report by adding slicers, dynamic visuals, gauges, scatter plots, and quality-domain exploration.
 
 ### Dashboard screenshots
